@@ -1,0 +1,92 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    color:rgb(135, 168, 250);
+}
+.title  {
+    margin: 0.3em 0;
+    padding: 0.02em;
+    color: black;
+    font-size: 1.5em;
+    border-bottom: 0.04em solid rgba(0, 0, 0, 0.2);
+}
+.mem {
+    vertical-align: middle;
+    margin: 0.3em 0;
+    padding: 0.02em 0.02em 0.4em;
+    border-bottom: 0.04em solid rgba(0, 0, 0, 0.2);
+}
+
+.lab {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    font-size: 1em;
+    height: 1.2em;
+    transition: all 0.4s;
+}
+
+.lab:hover {
+    color: black;
+}
+
+.lab_img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 1em;
+    background-image: url(./assets/icons/plus.png);
+    background-size:cover;
+    background-position:center;
+    transition: all 0.4s;
+}
+
+.lab:hover+.lab_img,.lab_img:hover {
+    transform: rotate(45deg);
+}
+
+.inp {
+    appearance: none;
+    width: 0;
+    height: 0;
+}
+.img {
+    display: block;
+    width: 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+    transition: all 0.5s;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lab:hover~.img, .lab_img:hover ~ .img, .mem:hover>.img, .img:hover {
+    width: 60%;
+    padding-bottom: 40%;
+}
+.img1 {
+    background-image: url(./assets/images/js_works.jpg);
+}
+.img2 {
+    background-image: url(./assets/images/js__kids.jpg);
+}
+.img3 {
+    background-image: url(./assets/images/js_good_parts.jpg);
+}
+.img4 {
+    background-image: url(./assets/images/choose_framework.png);
+}
+.img5 {
+    background-image: url(./assets/images/mobile_css.jpg);
+}
+.img6 {
+    background-image: url(./assets/images/your__site.jpg);
+}
