@@ -3,25 +3,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 .wrapper {
     width: 80%;
     margin: 0 auto;
-    color:rgb(135, 168, 250);
+    color: blue;
 }
-.title  {
+
+.wrapper:hover .lab{
+color: black;
+}
+
+.wrapper:hover .lab_img {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.title {
     margin: 0.3em 0;
     padding: 0.02em;
     color: black;
     font-size: 1.5em;
     border-bottom: 0.04em solid rgba(0, 0, 0, 0.2);
 }
+
 .mem {
     vertical-align: middle;
     margin: 0.3em 0;
     padding: 0.02em 0.02em 0.4em;
     border-bottom: 0.04em solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.mem:active > .lab {
+    color: blue;
+}
+.mem:active > .lab_img {
+    background-image: url(./assets/icons/plus1.png);
+}
+.mem:active > .img {
+    opacity: 0.6;
 }
 
 .lab {
@@ -30,10 +52,11 @@
     width: 90%;
     font-size: 1em;
     height: 1.2em;
+    cursor: pointer;
     transition: all 0.4s;
 }
 
-.lab:hover {
+input:checked + .lab,.lab:hover {
     color: black;
 }
 
@@ -42,14 +65,23 @@
     vertical-align: middle;
     width: 0;
     height: 0;
-    margin-left: 1em;
+    margin-left: 2em;
     background-image: url(./assets/icons/plus.png);
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
     transition: all 0.4s;
 }
 
-input:checked ~ .lab_img, .lab:hover+.lab_img,.lab_img:hover {
+.mem:hover > .lab_img,
+.lab:hover + .lab_img,
+.lab_img:hover {
+    width: 1.2em;
+    height: 1.2em;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .lab_img {
     transform: rotate(45deg);
 }
 
@@ -58,6 +90,7 @@ input:checked ~ .lab_img, .lab:hover+.lab_img,.lab_img:hover {
     width: 0;
     height: 0;
 }
+
 .img {
     display: block;
     width: 0;
@@ -65,26 +98,38 @@ input:checked ~ .lab_img, .lab:hover+.lab_img,.lab_img:hover {
     margin: 0 auto;
     transition: all 0.5s;
     background-size: cover;
+    cursor: pointer;
 }
-input:checked ~ .img, .lab:hover ~ .img, .lab_img:hover ~ .img, .mem:hover > .img, .img:hover {
+
+input:checked~.img,
+.lab:hover~.img,
+.lab_img:hover~.img,
+.mem:hover>.img,
+.img:hover {
     width: 60%;
     padding-bottom: 40%;
 }
+
 .img1 {
     background-image: url(./assets/images/js_works.jpg);
 }
+
 .img2 {
     background-image: url(./assets/images/js__kids.jpg);
 }
+
 .img3 {
     background-image: url(./assets/images/js_good_parts.jpg);
 }
+
 .img4 {
     background-image: url(./assets/images/choose_framework.png);
 }
+
 .img5 {
     background-image: url(./assets/images/mobile_css.jpg);
 }
+
 .img6 {
     background-image: url(./assets/images/your__site.jpg);
 }
