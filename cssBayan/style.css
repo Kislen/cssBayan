@@ -40,8 +40,8 @@
 .lab_img {
     display: inline-block;
     vertical-align: middle;
-    width: 1.2em;
-    height: 1.2em;
+    width: 0;
+    height: 0;
     margin-left: 1em;
     background-image: url(./assets/icons/plus.png);
     background-size:cover;
@@ -49,7 +49,7 @@
     transition: all 0.4s;
 }
 
-.lab:hover+.lab_img,.lab_img:hover {
+input:checked ~ .lab_img, .lab:hover+.lab_img,.lab_img:hover {
     transform: rotate(45deg);
 }
 
@@ -64,11 +64,9 @@
     padding-bottom: 0;
     margin: 0 auto;
     transition: all 0.5s;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
-.lab:hover~.img, .lab_img:hover ~ .img, .mem:hover>.img, .img:hover {
+input:checked ~ .img, .lab:hover ~ .img, .lab_img:hover ~ .img, .mem:hover > .img, .img:hover {
     width: 60%;
     padding-bottom: 40%;
 }
