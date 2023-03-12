@@ -118,7 +118,7 @@ input:checked~.img {
 
 @media (max-width:767.9px) {
     .wrapper {
-        width: 70%;
+        width: 90%;
     }
 
     .title {
