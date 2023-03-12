@@ -134,8 +134,8 @@ input:checked~.img {
     }
 
     input:checked~.img {
-        width: 50%;
-        padding-bottom: 33%;
+        width: 80%;
+        padding-bottom: 53%;
     }
 
     .lab_img {
