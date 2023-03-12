@@ -7,13 +7,13 @@
 }
 
 .wrapper {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     color: blue;
 }
 
-.wrapper:hover .lab{
-color: black;
+.wrapper:hover .lab {
+    color: black;
 }
 
 .wrapper:hover .lab_img {
@@ -36,27 +36,32 @@ color: black;
     border-bottom: 0.04em solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.mem:active > .lab {
+
+.mem:active>.lab {
     color: blue;
 }
-.mem:active > .lab_img {
+
+.mem:active>.lab_img {
     background-image: url(./assets/icons/plus1.png);
 }
-.mem:active > .img {
+
+.mem:active>.img {
     opacity: 0.6;
 }
+
 
 .lab {
     display: inline-block;
     vertical-align: middle;
-    width: 90%;
+    width: 85%;
     font-size: 1em;
     height: 1.2em;
     cursor: pointer;
     transition: all 0.4s;
 }
 
-input:checked + .lab,.lab:hover {
+input:checked+.lab,
+.lab:hover {
     color: black;
 }
 
@@ -65,7 +70,7 @@ input:checked + .lab,.lab:hover {
     vertical-align: middle;
     width: 0;
     height: 0;
-    margin-left: 2em;
+    margin-left: 5%;
     background-image: url(./assets/icons/plus.png);
     background-size: cover;
     background-position: center;
@@ -73,15 +78,15 @@ input:checked + .lab,.lab:hover {
     transition: all 0.4s;
 }
 
-.mem:hover > .lab_img,
-.lab:hover + .lab_img,
+.mem:hover>.lab_img,
+.lab:hover+.lab_img,
 .lab_img:hover {
     width: 1.2em;
     height: 1.2em;
     transform: rotate(45deg);
 }
 
-input:checked ~ .lab_img {
+input:checked~.lab_img {
     transform: rotate(45deg);
 }
 
@@ -132,4 +137,62 @@ input:checked~.img,
 
 .img6 {
     background-image: url(./assets/images/your__site.jpg);
+}
+
+@media (max-width:767.9px) {
+    .wrapper {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    .mem {
+        font-size: 0.7em;
+    }
+    .lab {
+        width: 70%;
+    }
+
+    input:checked~.img,
+    .lab:hover~.img,
+    .lab_img:hover~.img,
+    .mem:hover>.img,
+    .img:hover {
+        width: 50%;
+        padding-bottom: 33%;
+    }
+    .lab_img {
+        margin-left: 18%;
+    }
+}
+
+@media (min-width: 1439px)  {
+    .wrapper {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .mem {
+        font-size: 1.4em;
+    }
+    .lab {
+        width: 85%;
+    }
+
+    input:checked~.img,
+    .lab:hover~.img,
+    .lab_img:hover~.img,
+    .mem:hover>.img,
+    .img:hover {
+        width: 60%;
+        padding-bottom: 40%;
+    }
+    .lab_img {
+        margin-left: 10%;
+    }
 }
